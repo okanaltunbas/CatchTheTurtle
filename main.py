@@ -2,7 +2,8 @@ import random
 import time
 import turtle
 
-global score, randomPosx, randomPosy, gameBool
+randomPosx = 0
+randomPosy = 0
 gameBool = True
 score = 0
 
@@ -63,7 +64,7 @@ def TimeCounter(gameTime):
 
 
 def ClickScreen(x, y):
-    global score
+    global score, randomPosx, randomPosy
 
     if (abs(randomPosx - x) < 50) & (abs(randomPosy - y) < 50) & gameBool :
         score += 1
